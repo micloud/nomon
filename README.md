@@ -40,5 +40,33 @@ In init.d scrtip, also accept: start|stop|restart|status|log
 ## Client invoke
 
 ```
-curl -sS http://107.167.182.43:443/ | json
+$ curl -sS http://107.167.182.43:443/ | json
+{
+  "cpu": {
+    "p1": 0.29296875,
+    "p2": 1.46484375
+  },
+  "mem": {
+    "p1": 6054.33203125,
+    "p2": 13058.375,
+    "usage": 0.5363640551561737
+  },
+  "disk": [
+    {
+      "name": "/dev/disk/by-uuid/677bda0a-ac9f-4a6f-9947-0bc8dceda7de",
+      "p1": 3943204,
+      "p2": 10320184,
+      "usage": 0.3820865984559965
+    },
+    {
+      "name": "/dev/sdb",
+      "p1": 14249804,
+      "p2": 216744944,
+      "usage": 0.065744573954168
+    }
+  ],
+  "uptime": 251901.160023307,
+  "hostname": "simon-debian-tw",
+  "ts": 1402355871144
+}
 ```

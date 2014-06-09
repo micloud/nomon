@@ -1,0 +1,36 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides: nomon
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# processname: nomon
+# chkconfig: 345 20 80
+# Description: nomon monitor service
+### END INIT INFO
+
+export PATH=/opt/nomon/bin:$PATH
+export NOMON=/mnt/pd0/nomon/service.js
+
+case $1 in
+start)
+				forever stop $NOMON
+        forever start $NOMON
+        ;;
+stop)
+				forever stop $NOMON
+        ;;
+restart)
+				forever restart $NOMON
+        ;;
+status)
+				forever list
+        ;;
+log)
+				forever logs 0 #$NOMON
+        ;;
+*)
+				echo "Usage /etc/init.d/nomon [start|stop|statuslrestart|log]"
+esac
+exit 0

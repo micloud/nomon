@@ -1,0 +1,9 @@
+{
+  "name": "nomon",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "forever": "^0.11.1",
+    "nodeutil": "*"
+  }
+}

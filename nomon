@@ -13,6 +13,9 @@
 export PATH=/opt/nomon/bin:$PATH
 export NOMON=/opt/nomon/service.js
 
+# Update your port when need
+export PORT=1337
+
 case $1 in
 start)
 				forever stop $NOMON

@@ -39,8 +39,10 @@ In init.d scrtip, also accept: start|stop|restart|status|log
 
 ## Client invoke
 
+nomon server default start at 1337 port, you can request by the following request:
+
 ```
-$ curl -sS http://107.167.182.43:443/ | json
+$ curl -sS http://107.167.182.43:1337/ | json
 {
   "cpu": {
     "p1": 0.29296875,
@@ -70,3 +72,14 @@ $ curl -sS http://107.167.182.43:443/ | json
   "ts": 1402355871144
 }
 ```
+
+## Change the nomon server listen port
+
+Update the nomon file in download folder and reinstall or update the /etc/init.d/nomon file directly...
+
+```
+# Update this block to your prefer port
+# In this case, I use port 3000.
+export PORT=3000
+```
+

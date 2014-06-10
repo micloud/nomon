@@ -6,7 +6,7 @@ A lightware web show the current system information that include cpu, memory, di
 ## Install
 
 ```
-git clone git@github.com:micloud/nomon.git
+curl https://raw.githubusercontent.com/micloud/nomon/master/install.sh | bash
 ```
 
 You can change your service port in service.js.

@@ -8,6 +8,7 @@ A lightware web show the current system information that include cpu, memory, di
 ```
 curl https://raw.githubusercontent.com/micloud/nomon/master/install.sh | bash
 ```
+PS: You must use root to do the script!
 
 You can change your service port in service.js.
 
